@@ -2,8 +2,9 @@ from flask import Flask, g
 import sqlite3
 
 def connect_db():
-    sql = sqlite3.connect(r'')
+    sql = sqlite3.connect(r'db_memberApi')
     sql.row_factory = sqlite3.Row
+    #conn = sql.cursor()
     return sql
 
 def get_db():
